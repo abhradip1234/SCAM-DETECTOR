@@ -15,8 +15,7 @@ app.secret_key = "supersecretkey"
 # Supabase setup (from .env)
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-print("URL:", SUPABASE_URL)  # optional debug
-print("KEY:", SUPABASE_KEY)  # optional debug
+
 
 supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
@@ -218,4 +217,6 @@ def logout():
 
 # Run app
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
