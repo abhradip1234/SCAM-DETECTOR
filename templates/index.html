@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div style="text-align: right;">
+    <a href="/logout" class="logout-btn">Logout</a>
+</div>
+    <title>Scam Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Scam Detection System</h1>
+    <p class="subtitle">AI-powered message analysis</p>
+
+    <form action="/predict" method="post" class="form-box">
+        <textarea name="message" placeholder="Enter message to analyze..." required></textarea>
+
+        <div class="controls">
+            <select name="mode">
+                <option value="sms">SMS</option>
+                <option value="email">Email</option>
+            </select>
+
+            <button type="submit">Analyze</button>
+        </div>
+    </form>
+
+    {% if prediction %}
+    <div class="result-box">
+
+        <!-- User Message -->
+        <div class="chat user">
+            {{ user_message }}
+        </div>
+
+        <!-- Prediction -->
+        <div class="chat bot">
+            {{ prediction }}
+        </div>
+
+        <!-- Confidence -->
+        <div class="confidence">
+            <span>Confidence</span>
+            <span>{{ confidence }}%</span>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" style="width: {{ confidence }}%;"></div>
+        </div>
+
+        <!-- Suspicious Words -->
+        {% if words %}
+        <div class="info warning">
+            Suspicious keywords detected: {{ words }}
+        </div>
+        {% endif %}
+
+        <!-- URL Warning -->
+        {% if url_warning %}
+        <div class="info alert">
+            {{ url_warning }}
+        </div>
+        {% endif %}
+
+        <!-- AI Analysis (FIXED SECTION) -->
+        {% if ai_result %}
+        <div class="info ai-box">
+            <strong>AI Analysis</strong>
+            <p>{{ ai_result }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+    {% endif %}
+
+    <!-- History -->
+    <div class="history">
+        <h3>Recent Activity</h3>
+        <ul>
+            {% for msg, res in history %}
+                <li>{{ msg }} → {{ res }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

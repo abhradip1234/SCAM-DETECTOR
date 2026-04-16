@@ -1,0 +1,70 @@
+/* Signup Page Styles */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #020617, #1e3a8a);
+    color: #e2e8f0;
+}
+
+.signup-container {
+    width: 360px;
+    margin: 120px auto;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.signup-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #334155;
+    color: white;
+}
+
+.signup-container input:focus {
+    outline: none;
+    background: #475569;
+}
+
+/* Button */
+.signup-container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #3b82f6;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.signup-container button:hover {
+    background: #2563eb;
+}
+
+/* Links */
+.signup-container a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+.signup-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}

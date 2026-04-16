@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.container {
+    width: 60%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.form-box {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+select {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.result-box {
+    margin-top: 25px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.chat {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.user {
+    background: #334155;
+    text-align: left;
+}
+
+.bot {
+    background: #475569;
+    text-align: left;
+}
+
+.confidence {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    background: #334155;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 10px;
+    background: #3b82f6;
+    border-radius: 5px;
+}
+
+.info {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.warning {
+    background: #78350f;
+    color: #facc15;
+}
+
+.alert {
+    background: #7f1d1d;
+    color: #f87171;
+}
+
+.history {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.history ul {
+    padding-left: 20px;
+}
+.logout-btn {
+    text-decoration: none;
+    padding: 6px 12px;
+    background: #ef4444;
+    color: white;
+    border-radius: 6px;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
